@@ -1,3 +1,4 @@
+
 # project14-Henin0922
 
 # Project Name
@@ -9,7 +10,6 @@
 
 ## документация
 * [Лабораторная работа 1](https://docs.google.com/document/d/1yhcca8aMgdnhbYxXBvKgBn1aD3P57xe0QzGBDo9CsZ8/edit)
-* Лабораторная работа 2
 
 
 # Installation
@@ -18,7 +18,7 @@
 
 # Sub modules
 
-[Ссылка на репозиторий блога на Django]()
+[Ссылка на репозиторий блога на Django](https://github.com/fpmi-hci-2024/project14-web-Henin0922)
 
 # Usage
 
@@ -29,7 +29,3 @@
 Автор - Чжан Хайнин
 
 
-
-
-
-如果您想为这个项目做出贡献，请 [联系我们](联系方式或贡献指南链接)。
