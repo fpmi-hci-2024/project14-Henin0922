@@ -1,0 +1,80 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+!include https://raw.githubusercontent.com/plantuml-stdlib/EventStorming/main/EventStorming.puml
+
+' 大图（Big Picture）
+LAYOUT_TOP_DOWN
+title 中国和白俄罗斯美食网站 - EventStorming大图
+
+Domain_Event(user_registered, "用户注册")
+Domain_Event(recipe_added, "食谱添加")
+Domain_Event(recipe_viewed, "食谱查看")
+Domain_Event(comment_posted, "评论发布")
+Domain_Event(blog_published, "博客发布")
+Domain_Event(newsletter_sent, "新闻邮件发送")
+
+Command(register_user, "注册用户")
+Command(add_recipe, "添加食谱")
+Command(view_recipe, "查看食谱")
+Command(post_comment, "发布评论")
+Command(publish_blog, "发布博客")
+Command(send_newsletter, "发送新闻邮件")
+
+Aggregate(user, "用户")
+Aggregate(recipe, "食谱")
+Aggregate(comment, "评论")
+Aggregate(blog, "博客")
+Aggregate(newsletter, "新闻邮件")
+
+Policy(email_notification, "发送邮件通知")
+Policy(content_moderation, "内容审核")
+
+' 流程建模（Process Modeling）
+LAYOUT_AS_SKETCH
+title 食谱添加流程
+
+actor "用户" as actor
+Command(start_add_recipe, "开始添加食谱")
+Domain_Event(recipe_draft_created, "食谱草稿创建")
+Command(edit_recipe, "编辑食谱")
+Domain_Event(recipe_edited, "食谱已编辑")
+Command(submit_for_review, "提交审核")
+Domain_Event(recipe_submitted, "食谱已提交")
+Command(review_recipe, "审核食谱")
+Domain_Event(recipe_approved, "食谱已批准")
+Command(publish_recipe, "发布食谱")
+Domain_Event(recipe_published, "食谱已发布")
+
+actor --> start_add_recipe
+start_add_recipe --> recipe_draft_created
+recipe_draft_created --> edit_recipe
+edit_recipe --> recipe_edited
+recipe_edited --> submit_for_review
+submit_for_review --> recipe_submitted
+recipe_submitted --> review_recipe
+review_recipe --> recipe_approved
+recipe_approved --> publish_recipe
+publish_recipe --> recipe_published
+
+' 软件设计（Software Design）
+LAYOUT_WITH_LEGEND
+title 软件设计
+
+Component(user_service, "用户服务")
+Component(recipe_service, "食谱服务")
+Component(comment_service, "评论服务")
+Component(blog_service, "博客服务")
+Component(notification_service, "通知服务")
+Component(moderation_service, "内容审核服务")
+
+Rel(user_service, recipe_service, "使用")
+Rel(recipe_service, comment_service, "使用")
+Rel(user_service, blog_service, "使用")
+Rel(user_service, notification_service, "使用")
+Rel(recipe_service, notification_service, "使用")
+Rel(blog_service, notification_service, "使用")
+Rel(recipe_service, moderation_service, "使用")
+Rel(comment_service, moderation_service, "使用")
+Rel(blog_service, moderation_service, "使用")
+
+@enduml
