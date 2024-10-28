@@ -11,6 +11,7 @@
 ## документация
 * [Лабораторная работа 1](https://docs.google.com/document/d/1yhcca8aMgdnhbYxXBvKgBn1aD3P57xe0QzGBDo9CsZ8/edit)
 * [Лабораторная работа 2](https://docs.google.com/document/d/1ZH80_YNGwIGWKNEML3cXlBpWfNpAD_fk09pvASh3QkM/edit)
+* [Лабораторная работа 3](https://docs.google.com/document/d/1gfuWYidY1jB-sN2SKhrbpnpT3yZ6UJBtdZLaYRvHnOE/edit?tab=t.0)
 
 # Installation
 
