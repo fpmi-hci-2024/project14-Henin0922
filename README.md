@@ -15,6 +15,7 @@
 * [Лабораторная работа 4](https://docs.google.com/document/d/1OteAI2kbJSmB7D39j_xePSIGLeHNKjOKJNlvmONB8NI/edit?tab=t.0)
 * [Лабораторная работа 5](https://docs.google.com/document/d/15hzQW0E-LPNWfsusqvCB46Bnjt9aJW3PBTtfkrGIqJk/edit?tab=t.0)
 * [Лабораторная работа 6](https://docs.google.com/document/d/1JqtgdSNyGs67k2NIfyUcJUGJO2DLsSWt5xKhOF6CVmo/edit?tab=t.0)
+* [Лабораторная работа 7-9](https://docs.google.com/document/d/1xzqXZwQchWcLMO5Mq1hXq4DuP1NxrD9Gz55ePrq-uRo/edit?tab=t.0)
 # Installation
 
 Данный репозиторий содержит документацию по проекту. Установка не требуется.
